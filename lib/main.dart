@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'homepage.dart';
 
 void main() {
   runApp(const MaterialApp(home: Mobapp()));
@@ -9,9 +10,8 @@ class Mobapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-      title: const Text("Welcome"),
-    ));
+    return const  MaterialApp(
+      home: Homepage(),
+    );
   }
 }
