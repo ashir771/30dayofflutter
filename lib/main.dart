@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'homepage.dart';
+import 'home_page/homepage.dart';
+import 'home_page/loginpage.dart';
 
 void main() {
   runApp(const MaterialApp(home: Mobapp()));
@@ -10,8 +11,15 @@ class Mobapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const  MaterialApp(
-      home: Homepage(),
+    return  MaterialApp(
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+      ),
+     routes: {
+      "/":(context) => Loginpage(),
+      "home":(context) => Homepage(),
+     },
     );
   }
 }
